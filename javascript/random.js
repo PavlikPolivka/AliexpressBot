@@ -28,7 +28,7 @@ casper.then(function() {
     // aggregate all alliexpress categories
     links = this.evaluate(getCategories);
     category = links[Math.floor(Math.random()*links.length)];
-    category += "?shipCountry=cz&SortType=price_asc";
+    category += "?shipCountry=cz&SortType=price_asc&isFreeShip=y";
     this.open(category);
 });
 
