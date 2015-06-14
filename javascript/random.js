@@ -9,7 +9,7 @@ var casper = require('casper').create({
 });
 
 function getCategories() {
-    var links = document.querySelectorAll('#page ul a');
+    var links = document.querySelectorAll('#page ul a:not(.more-link)');
     return Array.prototype.map.call(links, function(e) {
         return e.getAttribute('href');
     });
