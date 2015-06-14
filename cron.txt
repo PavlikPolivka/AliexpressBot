@@ -1,1 +1,1 @@
-0 * * * * ./run.sh > /dev/null 2>&1
+0 0 * * * text=$(PHANTOMJS_EXECUTABLE=/usr/local/bin/phantomjs /usr/local/bin/casperjs ~/AliexpressBot/javascript/random.js);twidge update  "Today's random item is:  $text Enjoy!";  echo $text > ~/log/cron.log
