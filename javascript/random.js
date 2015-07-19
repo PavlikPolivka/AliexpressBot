@@ -9,14 +9,14 @@ var casper = require('casper').create({
 });
 
 function getCategories() {
-    var links = document.querySelectorAll('#page ul a:not(.more-link)');
+    var links = document.querySelectorAll('#category > div:nth-child(3) > div > div.cg-main > div > div > div > ul > li > a')
     return Array.prototype.map.call(links, function(e) {
         return e.getAttribute('href');
     });
 }
 
 function getStoreItems() {
-    var links = document.querySelectorAll('h3 a');
+    var links = document.querySelectorAll('#list-items h3 > a');
     return Array.prototype.map.call(links, function(e) {
         return e.getAttribute('href');
     });
